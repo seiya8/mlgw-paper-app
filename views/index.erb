@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paper List</title>
+</head>
+<body>
+  <h1>Paper List</h1>
+  <table>
+    <tr>
+      <th>Author</th>
+      <th>Published At</th>
+      <th>Title</th>
+      <th>Journal</th>
+      <th>Link</th>
+    </tr>
+    <% @papers.each do |paper| %>
+      <tr>
+        <td><%= paper['author'] %></td>
+        <td><%= paper['published_at'] %></td>
+        <td><%= paper['title'] %></td>
+        <td><%= paper['journal'] %></td>
+        <td><a href="<%= paper['link'] %>" target="_blank" rel="noopener noreferrer">Link</a></td>
+      </tr>
+    <% end %>
+  </table>
+  <a href="/register">Add New Paper</a>
+</body>
+</html>
