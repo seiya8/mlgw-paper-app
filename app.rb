@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/reloader'
 require 'active_record'
 
 ActiveRecord::Base.establish_connection(
@@ -41,7 +42,8 @@ post '/register' do
     published_at: published_at,
     title: params[:title],
     journal: params[:journal],
-    link: params[:link]
+    link: params[:link],
+    arxiv: params[:arxiv]
   )
 
   if new_paper.save

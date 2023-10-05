@@ -12,6 +12,7 @@
       <th>Title</th>
       <th>Journal</th>
       <th>Link</th>
+      <th>Arxiv</th>
     </tr>
     <% @papers.each do |paper| %>
       <tr>
@@ -20,6 +21,7 @@
         <td><%= paper['title'] %></td>
         <td><%= paper['journal'] %></td>
         <td><a href="<%= paper['link'] %>" target="_blank" rel="noopener noreferrer">Link</a></td>
+        <td><a href="<%= paper['arxiv'] %>" target="_blank" rel="noopener noreferrer">Arxiv</a></td>
       </tr>
     <% end %>
   </table>
